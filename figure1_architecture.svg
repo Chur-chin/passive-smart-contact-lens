@@ -1,0 +1,229 @@
+<svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', monospace">
+
+  <!-- Background -->
+  <rect width="800" height="900" fill="#0a0a0f"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" fill="#e8e8e8" font-size="15" font-weight="bold" letter-spacing="1">Figure 1. Smart Contact Lens — Optical Stack Cross-Section</text>
+
+  <!-- ── AMBIENT LIGHT source ── -->
+  <defs>
+    <linearGradient id="lightGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fffbe6"/>
+      <stop offset="100%" stop-color="#ffd966" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="louverGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2a3a"/>
+      <stop offset="100%" stop-color="#1a1a28"/>
+    </linearGradient>
+    <linearGradient id="hbnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="50%" stop-color="#2a6aaa"/>
+      <stop offset="100%" stop-color="#1a3a5c"/>
+    </linearGradient>
+    <linearGradient id="grapheneGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a4a2a"/>
+      <stop offset="50%" stop-color="#2a8a4a"/>
+      <stop offset="100%" stop-color="#1a4a2a"/>
+    </linearGradient>
+    <linearGradient id="retinaGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a1a1a"/>
+      <stop offset="50%" stop-color="#aa3333"/>
+      <stop offset="100%" stop-color="#4a1a1a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowDown" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#aaaaaa"/>
+    </marker>
+    <marker id="arrowRight" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888888"/>
+    </marker>
+  </defs>
+
+  <!-- Sun rays -->
+  <g filter="url(#softglow)">
+    <line x1="200" y1="58" x2="280" y2="100" stroke="#ffd966" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+    <line x1="300" y1="52" x2="340" y2="100" stroke="#ffd966" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+    <line x1="400" y1="50" x2="400" y2="100" stroke="#ffd966" stroke-width="2" stroke-dasharray="4,3" opacity="0.9"/>
+    <line x1="500" y1="52" x2="460" y2="100" stroke="#ffd966" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+    <line x1="600" y1="58" x2="520" y2="100" stroke="#ffd966" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+  </g>
+  <text x="400" y="72" text-anchor="middle" fill="#ffd966" font-size="12" opacity="0.9">AMBIENT LIGHT</text>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- LAYER 1: Micro-Louver Film -->
+  <!-- ══════════════════════════════════════ -->
+  <rect x="100" y="105" width="600" height="90" rx="6" fill="url(#louverGrad)" stroke="#555566" stroke-width="1.5"/>
+
+  <!-- Louver fins -->
+  <g stroke="#888899" stroke-width="1" opacity="0.8">
+    <line x1="130" y1="108" x2="130" y2="192"/>
+    <line x1="160" y1="108" x2="160" y2="192"/>
+    <line x1="190" y1="108" x2="190" y2="192"/>
+    <line x1="220" y1="108" x2="220" y2="192"/>
+    <line x1="250" y1="108" x2="250" y2="192"/>
+    <line x1="280" y1="108" x2="280" y2="192"/>
+    <line x1="310" y1="108" x2="310" y2="192"/>
+    <line x1="340" y1="108" x2="340" y2="192"/>
+    <line x1="370" y1="108" x2="370" y2="192"/>
+    <line x1="400" y1="108" x2="400" y2="192"/>
+    <line x1="430" y1="108" x2="430" y2="192"/>
+    <line x1="460" y1="108" x2="460" y2="192"/>
+    <line x1="490" y1="108" x2="490" y2="192"/>
+    <line x1="520" y1="108" x2="520" y2="192"/>
+    <line x1="550" y1="108" x2="550" y2="192"/>
+    <line x1="580" y1="108" x2="580" y2="192"/>
+    <line x1="610" y1="108" x2="610" y2="192"/>
+    <line x1="640" y1="108" x2="640" y2="192"/>
+    <line x1="670" y1="108" x2="670" y2="192"/>
+  </g>
+
+  <!-- Blocked oblique rays (red X) -->
+  <g opacity="0.6">
+    <line x1="155" y1="108" x2="135" y2="130" stroke="#ff4444" stroke-width="1.5"/>
+    <line x1="135" y1="108" x2="155" y2="130" stroke="#ff4444" stroke-width="1.5"/>
+    <line x1="635" y1="108" x2="615" y2="130" stroke="#ff4444" stroke-width="1.5"/>
+    <line x1="615" y1="108" x2="635" y2="130" stroke="#ff4444" stroke-width="1.5"/>
+  </g>
+  <!-- Accepted vertical ray -->
+  <line x1="400" y1="108" x2="400" y2="192" stroke="#ffd966" stroke-width="2.5" filter="url(#glow)" opacity="0.9"/>
+
+  <text x="400" y="138" text-anchor="middle" fill="#ccccdd" font-size="13" font-weight="bold">LAYER 1 — Micro-Louver Film</text>
+  <text x="400" y="158" text-anchor="middle" fill="#9999aa" font-size="11">Angular Filter · Noise Rejection</text>
+  <text x="400" y="177" text-anchor="middle" fill="#777788" font-size="10">θ_c = arctan(p/h) ≈ 10–30°</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="400" y1="196" x2="400" y2="218" stroke="#aaaaaa" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- LAYER 2: hBN -->
+  <!-- ══════════════════════════════════════ -->
+  <rect x="100" y="222" width="600" height="110" rx="6" fill="url(#hbnGrad)" stroke="#2a6aaa" stroke-width="1.5"/>
+
+  <!-- hBN crystal lattice pattern -->
+  <g stroke="#4488cc" stroke-width="0.8" opacity="0.35">
+    <line x1="120" y1="240" x2="680" y2="240"/>
+    <line x1="120" y1="260" x2="680" y2="260"/>
+    <line x1="120" y1="280" x2="680" y2="280"/>
+    <line x1="120" y1="300" x2="680" y2="300"/>
+    <line x1="120" y1="320" x2="680" y2="320"/>
+    <!-- vertical -->
+    <line x1="140" y1="225" x2="140" y2="330"/>
+    <line x1="200" y1="225" x2="200" y2="330"/>
+    <line x1="260" y1="225" x2="260" y2="330"/>
+    <line x1="320" y1="225" x2="320" y2="330"/>
+    <line x1="380" y1="225" x2="380" y2="330"/>
+    <line x1="440" y1="225" x2="440" y2="330"/>
+    <line x1="500" y1="225" x2="500" y2="330"/>
+    <line x1="560" y1="225" x2="560" y2="330"/>
+    <line x1="620" y1="225" x2="620" y2="330"/>
+    <line x1="660" y1="225" x2="660" y2="330"/>
+  </g>
+
+  <!-- Concentration funnel effect -->
+  <polygon points="340,225 460,225 420,330 380,330" fill="#4488cc" opacity="0.15"/>
+  <line x1="340" y1="225" x2="385" y2="330" stroke="#66aaff" stroke-width="1" stroke-dasharray="3,2" opacity="0.6"/>
+  <line x1="460" y1="225" x2="415" y2="330" stroke="#66aaff" stroke-width="1" stroke-dasharray="3,2" opacity="0.6"/>
+  <line x1="400" y1="225" x2="400" y2="330" stroke="#88ccff" stroke-width="2.5" filter="url(#glow)" opacity="0.9"/>
+
+  <text x="400" y="252" text-anchor="middle" fill="#ccddff" font-size="13" font-weight="bold">LAYER 2 — hBN Photonic Layer</text>
+  <text x="400" y="272" text-anchor="middle" fill="#8899cc" font-size="11">Hyperbolic Concentration · Contrast Enhancement</text>
+  <text x="400" y="292" text-anchor="middle" fill="#6677aa" font-size="10">n_o ≈ 1.78 · n_e ≈ 1.65 · Enhancement η = 3–8×</text>
+  <text x="400" y="312" text-anchor="middle" fill="#6677aa" font-size="10">Graphene/hBN heterostructure → mobility &gt;100,000 cm²/V·s</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="400" y1="333" x2="400" y2="355" stroke="#aaaaaa" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- LAYER 3: Serpentine Graphene -->
+  <!-- ══════════════════════════════════════ -->
+  <rect x="100" y="359" width="600" height="220" rx="6" fill="url(#grapheneGrad)" stroke="#2a8a4a" stroke-width="1.5"/>
+
+  <!-- Serpentine pattern -->
+  <g fill="none" stroke="#55cc77" stroke-width="2" opacity="0.5">
+    <path d="M130,395 Q160,375 190,395 Q220,415 250,395 Q280,375 310,395 Q340,415 370,395 Q400,375 430,395 Q460,415 490,395 Q520,375 550,395 Q580,415 610,395 Q640,375 670,395"/>
+    <path d="M130,430 Q160,410 190,430 Q220,450 250,430 Q280,410 310,430 Q340,450 370,430 Q400,410 430,430 Q460,450 490,430 Q520,410 550,430 Q580,450 610,430 Q640,410 670,430"/>
+    <path d="M130,465 Q160,445 190,465 Q220,485 250,465 Q280,445 310,465 Q340,485 370,465 Q400,445 430,465 Q460,485 490,465 Q520,445 550,465 Q580,485 610,465 Q640,445 670,465"/>
+  </g>
+
+  <text x="400" y="383" text-anchor="middle" fill="#ccffdd" font-size="13" font-weight="bold">LAYER 3 — Serpentine Graphene</text>
+
+  <!-- Three sub-functions -->
+  <!-- Function A: Polarization Modulation -->
+  <rect x="115" y="495" width="170" height="72" rx="4" fill="#0a2a14" stroke="#2a7a3a" stroke-width="1"/>
+  <text x="200" y="514" text-anchor="middle" fill="#66ff88" font-size="11" font-weight="bold">A. Polarization</text>
+  <text x="200" y="530" text-anchor="middle" fill="#66ff88" font-size="11" font-weight="bold">Modulation</text>
+  <text x="200" y="548" text-anchor="middle" fill="#44aa55" font-size="9">Image Formation</text>
+  <text x="200" y="562" text-anchor="middle" fill="#336644" font-size="9">T(x,y) via gate voltage</text>
+
+  <!-- Function B: Strain Sensing -->
+  <rect x="315" y="495" width="170" height="72" rx="4" fill="#0a2a14" stroke="#2a7a3a" stroke-width="1"/>
+  <text x="400" y="514" text-anchor="middle" fill="#66ff88" font-size="11" font-weight="bold">B. Strain Sensing</text>
+  <text x="400" y="530" text-anchor="middle" fill="#44aa55" font-size="9">Eye-Rotation Tracking</text>
+  <text x="400" y="548" text-anchor="middle" fill="#336644" font-size="9">GF ≈ 2–6</text>
+  <text x="400" y="562" text-anchor="middle" fill="#336644" font-size="9">Resolution &lt; 1°</text>
+
+  <!-- Function C: Light Harvesting -->
+  <rect x="515" y="495" width="170" height="72" rx="4" fill="#0a2a14" stroke="#2a7a3a" stroke-width="1"/>
+  <text x="600" y="514" text-anchor="middle" fill="#66ff88" font-size="11" font-weight="bold">C. Light Harvesting</text>
+  <text x="600" y="530" text-anchor="middle" fill="#44aa55" font-size="9">Power Generation</text>
+  <text x="600" y="548" text-anchor="middle" fill="#336644" font-size="9">~5 nW @ 500 lux</text>
+  <text x="600" y="562" text-anchor="middle" fill="#336644" font-size="9">Broadband absorption</text>
+
+  <!-- Connector lines from main graphene to sub-boxes -->
+  <line x1="400" y1="475" x2="200" y2="495" stroke="#44aa55" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="400" y1="475" x2="400" y2="495" stroke="#44aa55" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="400" y1="475" x2="600" y2="495" stroke="#44aa55" stroke-width="1" stroke-dasharray="3,2"/>
+  <circle cx="400" cy="475" r="3" fill="#66ff88"/>
+
+  <!-- Arrow 3→4 -->
+  <line x1="400" y1="580" x2="400" y2="602" stroke="#aaaaaa" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- RETINA / Eye optics -->
+  <!-- ══════════════════════════════════════ -->
+  <rect x="100" y="606" width="600" height="80" rx="6" fill="#1a0a0a" stroke="#883333" stroke-width="1.5"/>
+
+  <!-- Curved retina suggestion -->
+  <path d="M120,685 Q400,620 680,685" fill="none" stroke="#cc4444" stroke-width="2" opacity="0.5"/>
+  <ellipse cx="400" cy="640" rx="30" ry="18" fill="#cc3333" opacity="0.3"/>
+  <text x="400" y="636" text-anchor="middle" fill="#ffaaaa" font-size="13" font-weight="bold">CORNEA → Native Optics (~60 D) → RETINA</text>
+  <text x="400" y="656" text-anchor="middle" fill="#aa6666" font-size="10">No additional focusing optics required</text>
+  <text x="400" y="675" text-anchor="middle" fill="#774444" font-size="10">Focal distance problem resolved by design</text>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- Feedback arrow: strain → modulation -->
+  <!-- ══════════════════════════════════════ -->
+  <path d="M400,531 Q740,531 740,420 Q740,362 690,362" fill="none" stroke="#ffaa00" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowRight)" opacity="0.7"/>
+  <text x="748" y="450" text-anchor="start" fill="#ffaa00" font-size="10" opacity="0.8">Gaze-contingent</text>
+  <text x="748" y="463" text-anchor="start" fill="#ffaa00" font-size="10" opacity="0.8">render update</text>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- Scale / Legend -->
+  <!-- ══════════════════════════════════════ -->
+  <rect x="100" y="710" width="600" height="60" rx="4" fill="#111118" stroke="#333344" stroke-width="1"/>
+  <text x="120" y="730" fill="#888899" font-size="10">LEGEND</text>
+  <line x1="180" y1="726" x2="220" y2="726" stroke="#ffd966" stroke-width="2"/>
+  <text x="225" y="730" fill="#888899" font-size="10">Accepted light path</text>
+  <line x1="340" y1="726" x2="380" y2="726" stroke="#ff4444" stroke-width="1.5"/>
+  <line x1="340" y1="722" x2="380" y2="730" stroke="#ff4444" stroke-width="1.5"/>
+  <text x="385" y="730" fill="#888899" font-size="10">Blocked oblique ray</text>
+  <line x1="530" y1="726" x2="570" y2="726" stroke="#ffaa00" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="575" y="730" fill="#888899" font-size="10">Feedback signal</text>
+
+  <text x="120" y="755" fill="#888899" font-size="10">Total stack thickness target: &lt; 50 μm  ·  Substrate: PEGDA hydrogel  ·  Active area: ~1 cm²</text>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- Figure caption -->
+  <!-- ══════════════════════════════════════ -->
+  <text x="400" y="800" text-anchor="middle" fill="#666677" font-size="10" font-style="italic">Fig. 1 — Cross-sectional optical stack of the proposed passive-dominant smart contact lens.</text>
+  <text x="400" y="815" text-anchor="middle" fill="#666677" font-size="10" font-style="italic">Layers are not drawn to scale. Serpentine pattern is schematic.</text>
+
+</svg>
