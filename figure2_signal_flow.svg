@@ -1,0 +1,107 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', monospace">
+
+  <rect width="800" height="600" fill="#0a0a0f"/>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#aaaaaa"/>
+    </marker>
+    <marker id="arrY" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffaa00"/>
+    </marker>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <text x="400" y="32" text-anchor="middle" fill="#e8e8e8" font-size="15" font-weight="bold" letter-spacing="1">Figure 2. Functional Signal Flow Diagram</text>
+
+  <!-- ── PHOTON INPUT ── -->
+  <rect x="270" y="52" width="260" height="42" rx="6" fill="#2a2a10" stroke="#ffd966" stroke-width="1.5"/>
+  <text x="400" y="72" text-anchor="middle" fill="#ffd966" font-size="12" font-weight="bold">PHOTON INPUT</text>
+  <text x="400" y="87" text-anchor="middle" fill="#aa9933" font-size="10">Ambient Light (Indoor: ~200–500 lux)</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="95" x2="400" y2="118" stroke="#aaaaaa" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── LOUVER FILTER ── -->
+  <rect x="270" y="120" width="260" height="42" rx="6" fill="#1a1a2a" stroke="#555566" stroke-width="1.5"/>
+  <text x="400" y="140" text-anchor="middle" fill="#9999cc" font-size="12" font-weight="bold">Micro-Louver Film</text>
+  <text x="400" y="155" text-anchor="middle" fill="#555577" font-size="10">Rejects oblique rays · θ_c ≈ 10–30°</text>
+
+  <!-- Reject arrow (sideways) -->
+  <line x1="270" y1="141" x2="180" y2="141" stroke="#ff4444" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="4,2"/>
+  <text x="170" y="137" text-anchor="end" fill="#ff4444" font-size="9">Oblique</text>
+  <text x="170" y="149" text-anchor="end" fill="#ff4444" font-size="9">rays blocked</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="163" x2="400" y2="186" stroke="#aaaaaa" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── hBN LAYER ── -->
+  <rect x="270" y="188" width="260" height="42" rx="6" fill="#0d1f35" stroke="#2a6aaa" stroke-width="1.5"/>
+  <text x="400" y="208" text-anchor="middle" fill="#6699dd" font-size="12" font-weight="bold">hBN Photonic Layer</text>
+  <text x="400" y="223" text-anchor="middle" fill="#334466" font-size="10">Concentrates light · enhances graphene mobility</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="231" x2="400" y2="254" stroke="#aaaaaa" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── GRAPHENE LAYER ── -->
+  <rect x="270" y="256" width="260" height="42" rx="6" fill="#0d2015" stroke="#2a8a4a" stroke-width="1.5"/>
+  <text x="400" y="276" text-anchor="middle" fill="#55dd77" font-size="12" font-weight="bold">Serpentine Graphene Array</text>
+  <text x="400" y="291" text-anchor="middle" fill="#2a5535" font-size="10">Multifunctional active layer</text>
+
+  <!-- Three branches down from graphene -->
+  <line x1="340" y1="298" x2="200" y2="335" stroke="#44aa55" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="400" y1="298" x2="400" y2="335" stroke="#44aa55" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="460" y1="298" x2="600" y2="335" stroke="#44aa55" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── FUNCTION A ── -->
+  <rect x="110" y="337" width="180" height="65" rx="5" fill="#0a1f10" stroke="#2a6a3a" stroke-width="1.5"/>
+  <text x="200" y="356" text-anchor="middle" fill="#66ff88" font-size="11" font-weight="bold">A. Polarization</text>
+  <text x="200" y="371" text-anchor="middle" fill="#66ff88" font-size="11" font-weight="bold">Modulation</text>
+  <text x="200" y="387" text-anchor="middle" fill="#336644" font-size="9">Image Formation</text>
+  <text x="200" y="399" text-anchor="middle" fill="#224433" font-size="9">T(x,y) pixel mask</text>
+
+  <!-- ── FUNCTION B ── -->
+  <rect x="310" y="337" width="180" height="65" rx="5" fill="#0a1f10" stroke="#2a6a3a" stroke-width="1.5"/>
+  <text x="400" y="356" text-anchor="middle" fill="#66ff88" font-size="11" font-weight="bold">B. Strain Sensing</text>
+  <text x="400" y="372" text-anchor="middle" fill="#44aa55" font-size="9">Eye-Rotation θ(t)</text>
+  <text x="400" y="387" text-anchor="middle" fill="#336644" font-size="9">GF ≈ 2–6</text>
+  <text x="400" y="399" text-anchor="middle" fill="#224433" font-size="9">Resolution &lt; 1°</text>
+
+  <!-- ── FUNCTION C ── -->
+  <rect x="510" y="337" width="180" height="65" rx="5" fill="#0a1f10" stroke="#2a6a3a" stroke-width="1.5"/>
+  <text x="600" y="356" text-anchor="middle" fill="#66ff88" font-size="11" font-weight="bold">C. Light Harvesting</text>
+  <text x="600" y="372" text-anchor="middle" fill="#44aa55" font-size="9">Photocurrent → μW</text>
+  <text x="600" y="387" text-anchor="middle" fill="#336644" font-size="9">~5 nW @ 500 lux</text>
+  <text x="600" y="399" text-anchor="middle" fill="#224433" font-size="9">Powers readout circuits</text>
+
+  <!-- Arrow A → Retina -->
+  <line x1="200" y1="403" x2="200" y2="440" stroke="#44aa55" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="200" y1="452" x2="350" y2="468" stroke="#44aa55" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Arrow B → feedback loop -->
+  <path d="M400,403 Q400,425 490,430 Q620,435 650,380 Q680,330 530,295" fill="none" stroke="#ffaa00" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrY)"/>
+  <text x="665" y="375" text-anchor="start" fill="#ffaa00" font-size="9">Gaze</text>
+  <text x="665" y="387" text-anchor="start" fill="#ffaa00" font-size="9">feedback</text>
+
+  <!-- Arrow C → power rail -->
+  <line x1="600" y1="403" x2="600" y2="445" stroke="#44aa55" stroke-width="1.5"/>
+  <line x1="600" y1="445" x2="460" y2="470" stroke="#44aa55" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── RETINA ── -->
+  <rect x="270" y="472" width="260" height="52" rx="6" fill="#1a0808" stroke="#883333" stroke-width="1.5"/>
+  <text x="400" y="492" text-anchor="middle" fill="#ffaaaa" font-size="12" font-weight="bold">RETINA</text>
+  <text x="400" y="508" text-anchor="middle" fill="#774444" font-size="10">Native eye optics focus image</text>
+  <text x="400" y="521" text-anchor="middle" fill="#553333" font-size="9">No additional focusing required</text>
+
+  <!-- Power label -->
+  <rect x="430" y="445" width="120" height="22" rx="3" fill="#0a200a" stroke="#225522" stroke-width="1"/>
+  <text x="490" y="460" text-anchor="middle" fill="#44aa44" font-size="9">μW power rail → circuits</text>
+
+  <!-- Caption -->
+  <text x="400" y="558" text-anchor="middle" fill="#666677" font-size="10" font-style="italic">Fig. 2 — Parallel signal flow showing simultaneous operation of three graphene functions.</text>
+  <text x="400" y="572" text-anchor="middle" fill="#666677" font-size="10" font-style="italic">Yellow dashed line = gaze-contingent feedback from strain sensor to modulation layer.</text>
+
+</svg>
